@@ -4,7 +4,7 @@ function addContent() {
 
     return data.map(data => {
         const render = 
-        `<a href='${data.url}' target="_blank" class="project-tile">
+        `<a href="${data.url}" target="_blank" class="project-tile">
         <div class="project-img"> <img src='${data.img}'/></div>
         <div class="tile-title">
         <p><span class="code"> &lt; </span> ${data.title}
@@ -25,13 +25,13 @@ window.onload = addContent;
 data = [
  {
     title: "Javascrupt Drum Kit",
-    url: "01 - JavaScript Drum Kit/index.html", 
+    url: "01 - JavaScript Drum Kit", 
     img: "src/projectImages/01_port.jpg",
      
  },
  {
-    title: "JS Clock", 
-    url: "",
+    title: "CSS + JS Clock", 
+    url: "02 - CSS + JS Clock",
     img: "src/projectImages/02_port.jpg",
  }
     // {
