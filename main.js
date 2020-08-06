@@ -26,13 +26,13 @@ data = [
  {
     title: "Javascrupt Drum Kit",
     url: "01 - JavaScript Drum Kit/index.html", 
-    img: "https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg",
+    img: "src/projectImages/01_port.jpg",
      
  },
  {
-    title: "", 
+    title: "JS Clock", 
     url: "",
-    img: "https://pro2-bar-s3-cdn-cf1.myportfolio.com/fb4d41cfa483d3b572c75c8e5b9c791f/9875bb8e-b437-4bfe-97b6-1da7b97c1af5_rwc_339x0x2128x1667x2128.png",
+    img: "src/projectImages/02_port.jpg",
  }
     // {
     //     title: "Javascript Drum Kit",

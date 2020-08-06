@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="main.css" type="text/css" rel="stylesheet">
     <link href="../dist/normalize.css" type="text/css" rel="stylesheet">
     <link href="/favicon-JS3.png" type="image/ico" rel="shortcut icon">
+    <script src="main.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    Hello Drum kit!
+    <section id="pad">
+        <div class="keys">
+            <!-- keys generated through data mapping in main.js -->
+        </div>
+    </section>
+
+    <section id="audio">
+        <!-- audio generated through data mapping in main.js -->
+    </section>
 </body>
+
+<script defer>
+
+    // collect keys loaded from main.js and add transitionend listener
+    function setupRemoveTransition() {
+        const keys = document.querySelectorAll('.key');
+        console.log(keys);
+        keys.forEach(key => {
+            return key.addEventListener('transitionend', removeTransition);
+        })
+    }
+    function removeTransition(e) {
+        console.log(e);
+        this.classList.remove("playing");
+    }
+
+    window.addEventListener("keydown", function(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
+        if(!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+        key.classList.add("playing");
+    });
+
+    addLoadEvent(setupRemoveTransition);
+
+</script>
+
 </html>
