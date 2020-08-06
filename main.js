@@ -25,13 +25,13 @@ window.onload = addContent;
 data = [
  {
     title: "Javascrupt Drum Kit",
-    url: "01 - JavaScript Drum Kit", 
+    url: "01 - Javascript Drum Kit/", 
     img: "src/projectImages/01_port.jpg",
      
  },
  {
     title: "CSS + JS Clock", 
-    url: "02 - CSS + JS Clock",
+    url: "02 - CSS + JS Clock/",
     img: "src/projectImages/02_port.jpg",
  }
     // {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS + JS Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../favicon-JS3.png" type="image/ico" rel="shortcut icon">
+    <link href="../dist/normalize.css" type="text/css" rel="stylesheet">
+    <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <section id="clockSpace">
+        <div class="clock">
+            <div class="clock-face">
+                <div class="hand sec-hand"></div>
+                <div class="hand min-hand"></div>
+                <div class="hand hr-hand"></div>
+            </div>
+        </div>
+        <!-- <div>
+            Woah!
+        </div> -->
+    </section>
+</body>
+
+<script>
+    const secHands = document.querySelector('.sec-hand');
+    const hrHands = document.querySelector('.hr-hand');
+    const minHands = document.querySelector('.min-hand');
+    const hand = document.querySelectorAll('.hand');
+    
+
+    function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsToDegrees = ((seconds / 60) * 360) - 90;
+        // console.log(secondsToDegrees);
+        secHands.style.transform = `rotate(${secondsToDegrees}deg)`;
+
+        if(secondsToDegrees >= 260 || secondsToDegrees <= -80) {
+            hand[0].style.transition = "all 0s";
+        } else {
+            hand[0].style.transition = "all 0.05s";
+        }
+
+        const mins = now.getMinutes();
+        const minsToDegrees = ((mins / 60) * 360) - 90;
+        minHands.style.transform = `rotate(${minsToDegrees}deg)`;
+
+        if(minsToDegrees >= 260 || minsToDegrees) {
+            hand[1].style.transform = "all 0s";
+        } else {
+            hand[1].style.transform = "all 0.05s";
+        }
+
+        const hours = now.getHours();
+        const hoursToDegrees = ((hours / 12) * 360) - 90;
+        hrHands.style.transform = `rotate(${hoursToDegrees}deg)`;
+
+        if(hoursToDegrees >= 260 || hoursToDegrees) {
+            hand[1].style.transform = "all 0s";
+        } else {
+            hand[1].style.transform = "all 0.05s";
+        }
+    }
+
+    setInterval(setDate, 1000);
+
+</script>
+</html>
