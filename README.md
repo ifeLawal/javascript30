@@ -6,7 +6,7 @@ NO frameworks, NO compilers, NO libraries, NO boilerplate.
 
 A big thanks to Alex's [Javascript30](https://github.com/afuh/js30) which
 provided the logic for the addcontent code in main.js and
-Yusef's [JS30](https://github.com/yhabib/JavaScript30/blob/master/readme.md) for
+Yusef's [JS30](https://github.com/yhabib/JavaScript30/) for
 his super cool checklist.
 View the projects [here](https://ifelawal.github.io/javascript30/)
 

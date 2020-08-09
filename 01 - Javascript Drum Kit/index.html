@@ -58,9 +58,10 @@
         key.classList.add("playing");
     }
 
-    const inputOne = document.getElementsByClassName("keyList")[0];
-    const submitButton = document.getElementById("submit");
-    submitButton.addEventListener("click", function(event) {
+    const inputOne = document.getElementsByClassName("keyList")[0]; // get the first input 
+    const submitButton = document.getElementById("submit"); // get submit button
+
+    submitButton.addEventListener("click", function(event) { // convert each letter in the input into keycode and play the sound
         event.preventDefault();
         const keyList = inputOne.value.split("");
         console.log(keyList);

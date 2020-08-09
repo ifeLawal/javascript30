@@ -37,7 +37,7 @@
         // console.log(secondsToDegrees);
         secHands.style.transform = `rotate(${secondsToDegrees}deg)`;
 
-        if(secondsToDegrees >= 260 || secondsToDegrees <= -80) {
+        if(secondsToDegrees >= 260 || secondsToDegrees <= -90) {
             hand[0].style.transition = "all 0s";
         } else {
             hand[0].style.transition = "all 0.05s";
@@ -47,21 +47,21 @@
         const minsToDegrees = ((mins / 60) * 360) - 90;
         minHands.style.transform = `rotate(${minsToDegrees}deg)`;
 
-        if(minsToDegrees >= 260 || minsToDegrees) {
-            hand[1].style.transform = "all 0s";
-        } else {
-            hand[1].style.transform = "all 0.05s";
-        }
+        // if(minsToDegrees >= 260) {
+        //     hand[1].style.transform = "all 0s";
+        // } else {
+        //     hand[1].style.transform = "all 0.05s";
+        // }
 
         const hours = now.getHours();
         const hoursToDegrees = ((hours / 12) * 360) - 90;
         hrHands.style.transform = `rotate(${hoursToDegrees}deg)`;
 
-        if(hoursToDegrees >= 260 || hoursToDegrees) {
-            hand[1].style.transform = "all 0s";
-        } else {
-            hand[1].style.transform = "all 0.05s";
-        }
+        // if(hoursToDegrees >= 260) {
+        //     hand[1].style.transform = "all 0s";
+        // } else {
+        //     hand[1].style.transform = "all 0.05s";
+        // }
     }
 
     setInterval(setDate, 1000);

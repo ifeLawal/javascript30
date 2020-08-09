@@ -22,17 +22,18 @@ body {
 
 .clock {
     border: 15px solid white;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 300px;
     height: 300px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     box-shadow: var(--cool-shadow);
 }
 
 .clock-face {
     position: relative;
+    height: 300px;
     /* background-color: black;
     width: 40px;
     height: 40px; */
@@ -40,29 +41,31 @@ body {
 
 .hand {
     position: absolute;
-    width: 120px;
+    width: 180px;
     height: 7px;
     border-radius: 5px;
+    left: 40%;
+    bottom: 55%;
     /* box-shadow: 2px 2px green; */
     background-color: black;
-    transform-origin: 0%;
-    transform: rotate(-90deg);
+    transform-origin: 20%;
+    transform: rotate(-89deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.12, 2.15, 0.58, 1);
 }
 
 .min-hand {
-    width: 90px;
+    width: 120px;
     background-color: white;
 }
 
 .sec-hand {
-    width: 100px;
+    width: 120px;
     background-color: blue;
     height: 5px;
 }
 
 .hr-hand {
-    width: 110px;
+    width: 140px;
     background-color: yellow;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playing With CSS Variables</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="/favicon-JS3.png" type="image/ico" rel="shortcut icon">
+    <script src="main.js"></script>
+    
+    <style>
+        :root {
+            --base: #ffc600;
+            --spacing: 10px;
+            --blur: 10px;
+        }
+
+        img {
+            padding: var(--spacing);
+            background: var(--base);
+            filter: blur(var(--blur));
+        }
+
+        .hl {
+            color: var(--base);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section style="text-align:center;" class="controls">
+        <h2 >Update CSS Variables with <span class="hl">JS</span></h2>
+        <form>
+            <label>Spacing</label>
+            <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px"/>
+
+            <label>Blur:</label>
+            <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px"/>
+
+            <label>Base Color</label>
+            <input type="color" name="base" value="#fff"/>
+
+        </form>
+        <img style="margin-top:50px;width:100%;object-fit:cover;overflow:auto" src="https://i.picsum.photos/id/428/800/500.jpg?hmac=8k5nvSFeoqeNxo9Eny9Ri74-TpR-3oG5mT-ko6W73IA">
+    </section>
+    
+
+    <script>
+
+        function handleUpdate() {
+            const suffix = this.dataset.sizing || '';
+            console.log(suffix);
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+            localStorage.setItem(`${this.name}`, this.value + suffix);
+        }
+
+        const inputs = document.querySelectorAll(".controls input");
+
+        inputs.forEach(input => {
+            input.addEventListener("change", handleUpdate);
+            input.addEventListener("mousemove", handleUpdate);
+        });
+
+        let blurVal = localStorage.getItem("blur");
+        let spacing = localStorage.getItem("spacing");
+        let base = localStorage.getItem("base");
+
+        if(!blurVal) {
+            localStorage.setItem("blur", "10px");
+        } else {
+            document.documentElement.style.setProperty("--blur", blurVal);
+            inputs[1].value = blurVal.substring(0,blurVal.length-2);
+
+        }
+        if(!spacing) {
+            localStorage.setItem("spacing", "10px");
+        } else {
+            document.documentElement.style.setProperty("--spacing", spacing);
+            inputs[0].value = spacing.substring(0,spacing.length-2);
+        }
+        if(!base) {
+            localStorage.setItem("base", "#fff");
+        } else {
+            document.documentElement.style.setProperty("--base", base);
+            inputs[2].value = base;
+        }
+    </script>
+</body>
+</html>

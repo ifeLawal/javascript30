@@ -23,20 +23,20 @@ window.onload = addContent;
 // img, title, and url data for each project from the Javascript 30 course by
 // wes bos
 data = [
- {
-    title: "Javascrupt Drum Kit",
-    url: "01 - Javascript Drum Kit/", 
-    img: "src/projectImages/01_port.jpg",
-     
- },
- {
-    title: "CSS + JS Clock", 
-    url: "02 - CSS + JS Clock/",
-    img: "src/projectImages/02_port.jpg",
- }
-    // {
-    //     title: "Javascript Drum Kit",
-    //     url: "01 - JavaScript Drum Kit/index.html",
-    //     img: "01 - JavaScript Drum Kit/image/01_port.jpg",
-    // }
+    {
+        title: "Javascrupt Drum Kit",
+        url: "01 - Javascript Drum Kit/", 
+        img: "src/projectImages/01_port.jpg",
+        
+    },
+    {
+        title: "CSS + JS Clock", 
+        url: "02 - CSS + JS Clock/",
+        img: "src/projectImages/02_port.jpg",
+    },
+    {
+        title: "Playing with CSS Variables and JS",
+        url: "03 - Playing with CSS Variables and JS/index.html",
+        img: "src/projectImages/03_port.jpg",
+    }
 ]
