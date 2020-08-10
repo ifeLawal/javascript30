@@ -34,9 +34,21 @@ body {
 .clock-face {
     position: relative;
     height: 300px;
+    width: 300px;
     /* background-color: black;
     width: 40px;
     height: 40px; */
+}
+
+.mid-dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #f587d8;
+    border: 1px solid black;
+    border-radius: 50%;
+    left: 42.5%;
+    bottom: 50%;
 }
 
 .hand {
@@ -44,8 +56,8 @@ body {
     width: 180px;
     height: 7px;
     border-radius: 5px;
-    left: 40%;
-    bottom: 55%;
+    left: 36%;
+    bottom: 52%;
     /* box-shadow: 2px 2px green; */
     background-color: black;
     transform-origin: 20%;

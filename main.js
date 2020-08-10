@@ -38,5 +38,10 @@ data = [
         title: "Playing with CSS Variables and JS",
         url: "03 - Playing with CSS Variables and JS/index.html",
         img: "src/projectImages/03_port.jpg",
+    },
+    {
+        title: "Flex Panels Image Gallery",
+        url: "05 - Flex Panels Image Gallery/index.html",
+        img: "src/projectImages/05_port.jpg",
     }
 ]

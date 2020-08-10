@@ -13,10 +13,10 @@ View the projects [here](https://ifelawal.github.io/javascript30/)
 ## Table Of Contents
 
 1. [x] ~~[JavaScript Drum Kit](./01%20-%20Javascript%20Drum%20Kit)~~
-2. [x] [JS + CSS Clock]
-3. [x] [CSS Variables]
-4. [x] [Array Cardio, Day 1]
-5. [x] [Flex Panel Gallery]
+2. [x] ~~[JS + CSS Clock](./02%20-%20CSS%20+%20JS%20Clock/)~~
+3. [x] ~~[CSS Variables](./03%20-%20Playing%20with%20CSS%20Variables%20and%20JS/)~~
+4. [x] ~~[Array Cardio, Day 1]
+5. [x] ~~[Flex Panel Gallery](./05%20-%20Flex%20Panels%20Image%20Gallery/)~~
 6. [x] [Type Ahead]
 7. [x] [Array Cardio, Day 2]
 8. [x] [Fun with HTML5 Canvas]

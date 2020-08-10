@@ -34,6 +34,11 @@ body {
     text-decoration: none;
     border-radius: 5px;
     box-shadow: var(--cool-shadow);
+    transition: transform .7s ease-in-out;
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
 }
 
 .project-tile:hover .code {
