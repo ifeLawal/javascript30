@@ -43,5 +43,10 @@ data = [
         title: "Flex Panels Image Gallery",
         url: "05 - Flex Panels Image Gallery/index.html",
         img: "src/projectImages/05_port.jpg",
+    },
+    {
+        title: "Ajax Type Ahead",
+        url: "06 - Type Ahead/index.html",
+        img: "src/projectImages/06_port.jpg",
     }
 ]

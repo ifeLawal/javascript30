@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="/favicon-JS3.png" type="image/ico" rel="shortcut icon">
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+<script>
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+const cities = [];
+
+fetch(endpoint)
+  .then(blob => blob.json())
+  .then(data => cities.push(...data));
+
+  // console.table(cities);
+
+function findMatches(wordToMatch, cities) {
+  const regex = new RegExp(wordToMatch, 'ig');
+
+  const filteredCities = cities.filter(place => {
+     return place.city.match(regex) || place.state.match(regex);
+  })
+  // console.table(filteredCities);
+  return filteredCities;
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
+function displayMatches() {
+  const matches = findMatches(this.value, cities);
+  const regex = new RegExp(this.value, "ig");
+
+  let placeList = matches.map(place => {
+
+    const hlCity = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+    const hlState = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
+    const render =
+    `<li> <span>${hlCity}, ${hlState} </span> <span class="population"> ${numberWithCommas(place.population)} </span> </li>`;
+    
+    return render;
+  }).join("");
+  
+  console.log(matches);
+
+  if(this.value === "") {
+    placeList = `<li>Filter for a city</li>
+      <li>or a state</li>`;
+  }
+  
+  suggestion.innerHTML = placeList;
+}
+
+const input = document.querySelector('.search');
+const suggestion = document.querySelector('.suggestions');
+
+input.addEventListener('change', displayMatches);
+input.addEventListener('keyup', displayMatches);
+
+</script>
+</body>
+</html>
