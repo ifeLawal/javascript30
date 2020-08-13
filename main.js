@@ -51,7 +51,7 @@ data = [
     },
     {
         title: "Fun With HTML5 Canvas",
-        url: "08 - Fun With HTML5 Canvas/index.html",
+        url: "08 - Fun with HTML5 Canvas/index.html",
         img: "src/projectImages/08_port.jpg",
     }
 ]
