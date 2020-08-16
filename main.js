@@ -53,5 +53,10 @@ data = [
         title: "Fun With HTML5 Canvas",
         url: "08 - Fun with HTML5 Canvas/index.html",
         img: "src/projectImages/08_port.jpg",
+    },
+    {
+        title: "Hold Shift With Checkboxes",
+        url: "10 - Hold Shift and Check Checkboxes/index.html",
+        img: "src/projectImages/10_port.jpg",
     }
 ]

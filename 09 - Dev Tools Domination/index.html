@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Console Tricks!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <p onClick="makeGreen()">xBreakdownx</p>
+
+    <script>
+        const dogs = [{name: 'Snickers', age: 2}, {name: 'hugo', age: 8}];
+
+        let p = document.querySelector("p");
+        function makeGreen() {
+            p.style.color = "green";
+            p.style.fontSize = "50px";
+        }
+
+        // Regular
+        console.log("hello");
+
+        // Interpolated
+        console.log("I am a %s string", "🤩");
+
+        // Styled
+        // console.log("%c I am a style string", "font-size: 50px")
+
+        // warning!
+        console.warn("Oh NOOOOO");
+
+        // Error :|
+        console.error("You made 🤬 up")
+
+        // Info
+        console.info("The word Yugen means to wake up and see the sunrise!");
+
+        // Testing
+        console.assert("1" === 1, "Not the right type");
+
+        // clearing
+        console.clear();
+
+        // Viewing DOM Elements
+        console.log(p);
+        console.dir(p);
+
+        // Grouping together
+        dogs.forEach(dog => {
+            console.group(`${dog.name}`);
+            console.log(`This is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is ${dog.age*7} dog years old`);
+            console.groupEnd(`${dog.name}`);
+        })
+
+        // counting
+        console.count("Woooo");
+        console.count("Woooo");
+        console.count("Woooo");
+        console.count("No way!!");
+        console.count("No way!!");
+        console.count("No way!!");
+        console.count("Woooo");
+        console.count("Woooo");
+        console.count("Woooo");
+        console.count("No way!!");
+        console.count("No way!!");
+        console.count("No way!!");
+        console.count("No way!!");
+
+        // timing
+        console.time('fetch data')
+        fetch("https://api.thedogapi.com/v1/images/search")
+         .then(response => response.json())
+         .then(data => {
+             console.timeEnd('fetch data');
+             console.log(data);
+         })
+
+    </script>
+</body>
+</html>
