@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon-JS3.png" type="image/ico" rel="shortcut icon">
+    <title>12 Key Sequence Detection</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+    <p>Konami Code -> ⬆⬆⬇⬇⬅➡⬅➡<strong>B A "Enter Key"</strong> </p>
+    <!-- up, up, down, down, left, right, left, right, b, a, enter -->
+    <script>
+
+        let shiftDown = false;
+        let keysPressed = [];
+        let secretCode = "";
+        let maxKeys = 11;
+
+        window.addEventListener("keyup", (e) => {
+            keysPressed.push(e.key);
+            console.log([...keysPressed]);
+            
+            keysPressed.splice(-1 * maxKeys, keysPressed.length - maxKeys);
+            
+            // shift c to empyt the array and start from scratch
+            if(shiftDown && e.key == "C") {
+                keysPressed = [];
+            } else if(shiftDown && keysPressed.length == 1) {
+                keysPressed = [];
+                shiftDown = false;
+            }
+
+            if(keysPressed.join("").includes(secretCode)) {
+                console.log("We did it");
+                cornify_add();
+            }
+        })
+
+        window.addEventListener("keydown", (e) => {
+            if(e.shiftKey) {
+                shiftDown = true;
+            }
+         })
+        
+    </script>
+</body>
+</html>

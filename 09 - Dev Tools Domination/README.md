@@ -1,6 +1,6 @@
-# 04 Array Cardio Day 1
+# 09 Dev Tools Domination
 
-Worked with dev tools checking. 
+Worked with dev tools for logging errors and checking code. 
 Ones I found most exciting: 
 - console.assert
 - console.table

@@ -58,5 +58,25 @@ data = [
         title: "Hold Shift With Checkboxes",
         url: "10 - Hold Shift and Check Checkboxes/index.html",
         img: "src/projectImages/10_port.jpg",
-    }
+    },
+    {
+        title: "Custom Video Player",
+        url: "11 - Custom Video Player/index.html",
+        img: "src/projectImages/11_port.jpg",
+    },
+    {
+        title: "Key Sequence Detection",
+        url: "12 - Key Sequence Detection/index.html",
+        img: "src/projectImages/12_port.jpg",
+    },
+    {
+        title: "Slide in on Scroll",
+        url: "13 - Slide in on Scroll/index.html",
+        img: "src/projectImages/13_port.jpg",
+    },
+    // {
+    //     title: "Slide in on Scroll",
+    //     url: "13 - Slide in on Scroll/index.html",
+    //     img: "src/projectImages/13_port.jpg",
+    // },
 ]
