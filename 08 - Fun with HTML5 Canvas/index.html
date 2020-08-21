@@ -104,10 +104,11 @@
     lastX = e.offsetX;
     lastY = e.offsetY;
     hue = 0;
+    clickHere.style.display = "none";
   });
 
   canvas.addEventListener("mousemove", draw);
-  
+
   canvas.addEventListener('mouseup', () => isDrawing = false);
   canvas.addEventListener('mouseout', () => isDrawing = false);
 
@@ -135,9 +136,12 @@
 
   // need to trouble shoot this brush addition
 
-  clickHere.addEventListener("mouseover", function() {
+  clickHere.addEventListener("mouseover", function(e) {
     clickHere.style.display = "none";
   })
+
+  clickHere.addEventListener("mouseout", draw)
+
   function followMouse(e) {
     
     
