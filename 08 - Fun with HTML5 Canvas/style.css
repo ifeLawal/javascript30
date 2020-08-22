@@ -1,0 +1,39 @@
+#brush-circle {
+    border:1px solid black;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    z-index: -1;
+    /* background-color: black; */
+    position: absolute;
+    /* display: none; need to trobuleshoot the brush flickering */
+  }
+
+  canvas {
+    border: 1px solid red;
+  }
+
+  #controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    gap: 30px;
+  }
+
+  #click-message {
+    font-family: "Helvetica neue";
+    font-size: -webkit-xxx-large;
+    position: absolute;
+    color: gray;
+    top: 40%;
+    text-align: center;
+    z-index: -1;
+  } 
+
+  html, body {
+   margin: 0;
+  }
+
+  html, body {
+    margin: 0;
+  }
