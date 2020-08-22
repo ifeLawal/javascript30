@@ -5,10 +5,9 @@ function addContent() {
     return data.map(data => {
         const render = 
         `<a href="${data.url}" target="_blank" class="project-tile">
-        <div class="project-img"> <img src='${data.img}'/></div>
+        <div class="project-img"> <img src="${data.img}" /> </div>
         <div class="tile-title">
-        <p><span class="code"> &lt; </span> ${data.title}
-        <span class="code">/&gt;</span>
+        <p> ${data.title}
         </p>
         </div>
         </a>`;
