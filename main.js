@@ -73,6 +73,16 @@ data = [
         url: "13 - Slide in on Scroll/index.html",
         img: "src/projectImages/13_port.jpg",
     },
+    {
+        title: "LocalStorage and Event Delegation",
+        url: "15 - LocalStorage/index.html",
+        img: "src/projectImages/15_port.jpg",
+    },
+    {
+        title: "Mouse Move Shadow",
+        url: "16 - Mouse Move Shadow/index.html",
+        img: "src/projectImages/16_port.jpg",
+    },
     // {
     //     title: "Slide in on Scroll",
     //     url: "13 - Slide in on Scroll/index.html",

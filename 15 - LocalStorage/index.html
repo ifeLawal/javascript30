@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>LocalStorage</title>
   <link rel="stylesheet" href="style.css">
-  <link href="/favicon-JS3.png" type="text/css" rel="shortcut icon"/>
+  <link href="/favicon-JS3-complete.png" type="text/css" rel="shortcut icon"/>
 </head>
 <body>
   <!--
@@ -27,16 +27,19 @@
     </form>
     <form>
         <hr>
-        <input id="clear" type="submit" value="Clear">
-        <input id="check-all" type="submit" value="Check All">
-        <input id="uncheck-all" type="submit" value="Uncheck All">
+        <input id="clear" type="button" value="Clear">
+        <input id="check-all" type="button" value="Check All">
+        <input id="uncheck-all" type="button" value="Uncheck All">
     </form>
   </div>
 
 <script>
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
-  const items = JSON.parse(localStorage.getItem("items")) || [];
+  const clearItems = document.querySelector('#clear');
+  const checkAllItems = document.querySelector('#check-all');
+  const uncheckAllItems = document.querySelector('#uncheck-all');
+  let items = JSON.parse(localStorage.getItem("items")) || [];
 
   function addItem(e) {
     e.preventDefault();
@@ -81,6 +84,34 @@
 
   addItems.addEventListener('submit', addItem);
   itemsList.addEventListener('click', toggleDone);
+
+  function clearList() {
+    items = [];
+    populateList(items,itemsList);
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  clearItems.addEventListener('click', clearList);
+
+  function checkItems() {
+    items.map(item => {
+      item.done = true;
+    });
+    populateList(items, itemsList);
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  checkAllItems.addEventListener('click', checkItems);
+
+  function uncheckItems() {
+    items.map(item => {
+      item.done = false
+    });
+    populateList(items, itemsList);
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  uncheckAllItems.addEventListener('click', uncheckItems);
 
   populateList(items, itemsList);
 
