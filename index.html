@@ -7,14 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/normalize.css" type="text/css" rel="stylesheet">
     <link href="main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="favicon-JS3.png" type="image/ico" rel="shortcut icon">
     <script src="main.js"></script>
+
+    <style>
+
+        body {
+            font-family: "Source Sans Pro";
+            transition: all .4s ease-in-out;
+        }
+
+        .fa-moon {
+            cursor: pointer;
+            color: #2990E9;
+            transition: all .4s ease-in-out;
+        }
+
+        a {
+            color: #2990E9;
+            transition: all .4s ease-in-out;
+        }
+
+    </style>
+    
 </head>
+
 
 <body>
     <header>
-        <h1 style="margin-top: 20px;"> Javascript30 </h1>
-        <p>An amazing series of mini projects with VanillaJS by <a href="https://github.com/wesbos">Wes Bos.</a></p>
+        <h1 style="margin-top: 20px;"> Javascript30 <i id="switch-theme" class="far fa-moon"></i></h1>
+        <p style="max-width:600px;margin:20px auto 0px;line-height:30px;">A series of mini projects created through the <a href="https://github.com/wesbos">Wes Bos.</a> Javascript 30 course that strengthened my HTML, CSS, and VinallJS skills.</p>
     </header>
     <section id="projects">
         <div id="showcase">
@@ -30,5 +54,46 @@
         </div>
     </section>
 </body>
+
+
+<script>
+
+    let themeSwitch = document.querySelector("#switch-theme");
+
+    let darkTheme = false;
+    
+    if(localStorage.getItem(darkTheme) === "") {
+        localStorage.setItem("darkTheme", false);
+    } else {
+        darkTheme = localStorage.getItem("darkTheme") == "false" ? false : true;
+        setTheme();
+    }
+
+    function toggleDark() {
+        darkTheme = !darkTheme;
+    }
+
+    function setTheme() {
+        console.log(darkTheme);
+        if(darkTheme) {
+            console.log("We should be black");
+            document.body.style.backgroundColor = "Black";
+            document.body.style.color = "White";
+            document.querySelector(".fa-moon").style.color = "White";
+        } else {
+            console.log("We should be white");
+            document.body.style.backgroundColor = "White";
+            document.body.style.color = "Black";
+            document.querySelector(".fa-moon").style.color = "#2990E9";
+        }
+        localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+    }
+
+    themeSwitch.addEventListener("click", function() {
+        toggleDark();
+        setTheme();
+    })    
+
+</script>
 
 </html>

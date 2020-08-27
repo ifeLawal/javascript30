@@ -1,3 +1,3 @@
 # 15 LocalStorage
 
-Learned doing 
+Learned to set localstorage
