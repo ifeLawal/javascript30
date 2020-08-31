@@ -80,11 +80,13 @@
             document.body.style.backgroundColor = "Black";
             document.body.style.color = "White";
             document.querySelector(".fa-moon").style.color = "White";
+            document.querySelector("a").style.color = "White";
         } else {
             console.log("We should be white");
             document.body.style.backgroundColor = "White";
             document.body.style.color = "Black";
             document.querySelector(".fa-moon").style.color = "#2990E9";
+            document.querySelector("a").style.color = "#2990E9";
         }
         localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
     }

@@ -23,7 +23,7 @@ window.onload = addContent;
 // wes bos
 data = [
     {
-        title: "Javascrupt Drum Kit",
+        title: "Javascript Drum Kit",
         url: "01 - Javascript Drum Kit/", 
         img: "src/projectImages/01_port.jpg",
         
@@ -82,6 +82,21 @@ data = [
         title: "Mouse Move Shadow",
         url: "16 - Mouse Move Shadow/index.html",
         img: "src/projectImages/16_port.jpg",
+    },
+    {
+        title: "Sort Without Articles",
+        url: "17 - Sort Without Articles/index.html",
+        img: "src/projectImages/17_port.jpg",
+    },
+    {
+        title: "Webcam Fun",
+        url: "19 - Webcam Fun/index.html",
+        img: "src/projectImages/19_port.jpg",
+    },
+    {
+        title: "Speech Detection",
+        url: "20 - Speech Detection/index.html",
+        img: "src/projectImages/20_port.jpg",
     },
     // {
     //     title: "Slide in on Scroll",
