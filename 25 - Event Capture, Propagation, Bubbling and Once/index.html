@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+  <link href="/favicon-JS3-complete.png" type="image/ico" rel="shortcut icon">
+</head>
+<body class="bod">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after { 
+    box-sizing: inherit; 
+  }
+
+  div {
+    width: 100%;
+    padding: 100px;
+  }
+
+  .one {
+    background: thistle;
+  }
+
+  .two {
+    background: mistyrose;
+  }
+
+  .three {
+    background: coral;
+  }
+</style>
+
+<button></button>
+<script>
+
+  const divs = document.querySelectorAll("div");
+
+  function logText() {
+    console.log(this.classList.value);
+    // e.stopPropagation(); // stop bubbling. This is a risky event handler to use as it creates dead zones
+
+  }
+
+  document.body.addEventListener("click", logText);
+
+  // divs.forEach(div => div.addEventListener("click", logText));
+  divs.forEach(div => div.addEventListener("click", logText, {
+    capture: true,
+    once: true // runs this eventlistener once, then it in essence runs removeEventListener. Useful for store checkouts
+  }));
+  // Events bubble up
+  // to stop the bubbling you can e.stopPropagation();
+
+</script>
+</body>
+</html>
