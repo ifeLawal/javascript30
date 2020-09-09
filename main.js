@@ -98,9 +98,54 @@ data = [
         url: "20 - Speech Detection/index.html",
         img: "src/projectImages/20_port.jpg",
     },
+    {
+        title: "Follow Along Link",
+        url: "22 - Follow Along Link Highlighter/index.html",
+        img: "src/projectImages/22_port.jpg",
+    },
+    {
+        title: "Speech Detection",
+        url: "23 - Speech Synthesis/index.html",
+        img: "src/projectImages/23_port.jpg",
+    },
+    {
+        title: "Sticky Nav",
+        url: "24 - Sticky Nav/index.html",
+        img: "src/projectImages/24_port.jpg",
+    },
+    {
+        title: "Stripe Follow Along Nav",
+        url: "26 - Stripe Follow Along Nav/index.html",
+        img: "src/projectImages/26_port.jpg",
+    },
+    {
+        title: "Click and Drag",
+        url: "27 - Click and Drag/index.html",
+        img: "src/projectImages/27_port.jpg",
+    },
+    {
+        title: "Video Speed Controller",
+        url: "28 - Video Speed Controller/index.html",
+        img: "src/projectImages/28_port.jpg",
+    },
+    {
+        title: "Countdown Timer",
+        url: "29 - Countdown Timer/index.html",
+        img: "src/projectImages/29_port.jpg",
+    },
+    {
+        title: "Parallax Scroll",
+        url: "31 - Parallax Scroll/index.html",
+        img: "src/projectImages/31_port.jpg",
+    },
+    {
+        title: "Hamburger Menu",
+        url: "32 - Hamburger Menu/index.html",
+        img: "src/projectImages/32_port.jpg",
+    }
     // {
-    //     title: "Slide in on Scroll",
-    //     url: "13 - Slide in on Scroll/index.html",
-    //     img: "src/projectImages/13_port.jpg",
+    //     title: "Whack a Mole",
+    //     url: "30 - Whack a Mole/index.html",
+    //     img: "src/projectImages/30_port.jpg",
     // },
 ]
