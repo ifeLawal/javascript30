@@ -20,7 +20,7 @@ View the projects [here](https://ifelawal.github.io/javascript30/)
 6. [x] ~~[Type Ahead](./06%20-%20Type%20Ahead)~~ | [See the type ahead form]()
 7. [x] ~~[Array Cardio, Day 2](07%20-%20Array%20Cardio%20Day%202)~~
 8. [x] ~~[Fun with HTML5 Canvas](./08%20-%20Fun%20with%20HTML5%20Canvas)~~ | [Go paint!]()
-9. [x] ~~[Dev Tools Domination](./09%20-%20Dev%20Tools%20Domination)
+9. [x] ~~[Dev Tools Domination](./09%20-%20Dev%20Tools%20Domination)~~
 10. [x] ~~[Hold Shift and Check Checkboxes](./10%20-%20Hold%20Shift%20and%20Check%20Checkboxes)~~ | [Play with gmail like checkbox selection]()
 11. [x] ~~[Custom Video Player](./11%20-%20Custom%20Video%20Player)~~ | [Check out the custom video player]()
 12. [x] ~~[Key Sequence Detection](./12%20-%20Key%20Sequence%20Detection)~~ | [Go make some 🦄]()
@@ -29,7 +29,7 @@ View the projects [here](https://ifelawal.github.io/javascript30/)
 15. [x] ~~[LocalStorage](./15%20-%20LocalStorage)~~ | [Go save some 🌮 orders]()
 16. [x] ~~[Mouse Move Shadow](./16%20-%20Mouse%20Move%20Shadow)~~ | [Come have some mice fun!]()
 17. [x] ~~[Sort Without Articles](./17%20-%20Sort%20Without%20Articles)~~
-18. [x] ~~[Adding Up Times with Reduce](./18%20-%20Adding%20Up%20Times%20with%20Reduce)
+18. [x] ~~[Adding Up Times with Reduce](./18%20-%20Adding%20Up%20Times%20with%20Reduce)~~
 19. [x] ~~[Webcam Fun](./19%20-%20Webcam%20Fun)~~ | [Funky webcame filters and fun this way!]()
 20. [x] ~~[Speech Detection](./20%20-%20Speech%20Detection)~~ [Write with your voice!]()
 21. [ ] Geolocation - not possible due to iOs simulator inaccessbility
