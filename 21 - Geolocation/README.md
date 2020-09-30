@@ -1,3 +1,3 @@
-# 21 Geolocation
+# 21 - Geolocation
 
-Tried to Worked with iOs simulator and safari to simulate someone moving through a compass, but iOs rejected me.
+Tried to work with the iOs simulator and safari to simulate a compass that navigated for someone in motion, however due to iOs limitations on sending navigation simulation data to a computer, there was no data being fed into the test environment.

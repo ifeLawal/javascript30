@@ -1,6 +1,6 @@
 // Get our elements
 let player = document.querySelector(".player");
-let video = document.querySelector(".viewer");;
+let video = document.querySelector(".viewer");
 let progress = document.querySelector(".progress");
 let progressBar = document.querySelector(".progress__filled");
 let toggle = document.querySelector(".toggle");
@@ -9,7 +9,7 @@ let ranges = document.querySelectorAll(".player__slider");
 
 let isClicked = false;
 
-// build functions
+// use the built in video play and pause functions
 function togglePlay() {
     if(video.paused) {
         video.play();
@@ -18,10 +18,12 @@ function togglePlay() {
     }
 }
 
+// Toggle button between play and pause
 function updateButton() {
     toggle.innerHTML = this.paused ? "►" : "❚❚";
 }
 
+// Use the html dataset to skip??
 function skip() {
     video.currentTime += parseFloat(this.dataset.skip);
 }
